@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تفاصيل الفعالية | دليل فعاليات الجامعة الافتراضية</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body data-page="event"><div id="page-transition"></div>
+
+<header>
+<nav class="navbar navbar-expand-lg sticky-top app-nav"><div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="assets/img/logo.svg" width="38" height="38" alt="شعار الدليل"><span>دليل فعاليات الجامعة</span></a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nv" aria-label="القائمة"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nv"><ul class="navbar-nav ms-auto me-lg-3"><li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li><li class="nav-item"><a class="nav-link active" href="events.html">كل الفعاليات</a></li><li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li><li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li></ul>
+<button id="darkBtn" class="btn btn-sm btn-outline-secondary" type="button">🌙 الوضع الداكن</button></div></div></nav>
+</header>
+
+<main>
+<div class="container pt-4 pb-2">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent p-0 mb-2">
+      <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">الرئيسية</a></li>
+      <li class="breadcrumb-item"><a href="events.html" class="text-decoration-none">كل الفعاليات</a></li>
+      <li class="breadcrumb-item active text-muted" aria-current="page" id="bcTitle">تفاصيل الفعالية</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="container pb-4" id="detail"></div>
+
+<div class="container pb-5">
+  <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+    <h3 class="sec-title mb-0">فعاليات مشابهة قد تهمك</h3>
+    <a href="events.html" class="btn btn-sm btn-outline-primary">عرض جميع الفعاليات ←</a>
+  </div>
+  <div class="row g-4" id="related"></div>
+</div>
+
+<div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="bookModalLabel">🎟️ حجز مقعد وهمي للفعالية</h5>
+        <button type="button" class="btn-close btn-close-white ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted small mb-3">الدخول مجاني لطلاب الجامعة الافتراضية. يُرجى ملء البيانات لتأكيد الحجز المسبق وإصدار بطاقة الدخول التجريبية:</p>
+        <div class="mb-3">
+          <label class="form-label small fw-bold" for="bName">الاسم الكامل للطالب / الزائر:</label>
+          <input id="bName" class="form-control" placeholder="مثال: أحمد محمد الأحمد">
+        </div>
+        <div class="mb-3">
+          <label class="form-label small fw-bold" for="bEmail">البريد الإلكتروني للجامعة أو الشخصي:</label>
+          <input id="bEmail" type="email" class="form-control" placeholder="name@svuonline.org" dir="ltr">
+        </div>
+        <div class="row g-2 mb-3">
+          <div class="col-sm-6">
+            <label class="form-label small fw-bold" for="bSeats">عدد المقاعد:</label>
+            <select id="bSeats" class="form-select">
+              <option value="1">مقعد واحد (1)</option>
+              <option value="2">مقعدان (2)</option>
+              <option value="3">3 مقاعد</option>
+              <option value="4">4 مقاعد</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label small fw-bold" for="bMode">نوع الحضور:</label>
+            <select id="bMode" class="form-select">
+              <option value="حضوري في الحرم الجامعي">حضوري في الحرم الجامعي</option>
+              <option value="افتراضي عبر قاعات الجامعة">افتراضي عبر منصة الجامعة</option>
+            </select>
+          </div>
+        </div>
+        <div id="bMsg" class="mt-3"></div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button id="bGo" class="btn btn-primary px-4 fw-bold">تأكيد حجز المقعد</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="calModal" tabindex="-1" aria-labelledby="calModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow border-0">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="calModalLabel">📅 إضافة الفعالية إلى التقويم</h5>
+        <button type="button" class="btn-close btn-close-white ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body p-4 text-center">
+        <div class="fs-1 mb-2">🗓️</div>
+        <h5 class="fw-bold mb-2 text-primary" id="calModalTitle"></h5>
+        <p class="text-muted small mb-3" id="calModalMeta"></p>
+        <div class="alert alert-success py-2 mb-3 small">
+          ✓ جاهز للإضافة إلى تقويم هاتفك أو حاسوبك الشخصي.
+        </div>
+        <div class="d-grid">
+          <button id="btnDownloadIcs" class="btn btn-success fw-bold py-2">
+            📥 تنزيل ملف التقويم (.ics)
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow border-0">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="shareModalLabel">🔗 نسخ رابط الفعالية</h5>
+        <button type="button" class="btn-close btn-close-white ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted small mb-3">يمكنك نسخ رابط الفعالية المباشر ومشاركته بسهولة:</p>
+        
+        <label class="form-label small fw-bold">رابط الفعالية:</label>
+        <div class="input-group mb-3">
+          <input id="shareLinkInput" class="form-control" readonly dir="ltr">
+          <button id="btnCopyShare" class="btn btn-primary px-4 fw-bold">📋 نسخ الرابط</button>
+        </div>
+        <div id="copySuccessMsg" class="d-none alert alert-success py-2 mb-0 small text-center">
+          ✓ تم نسخ الرابط إلى الحافظة بنجاح!
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content shadow border-0 bg-dark text-white">
+      <div class="modal-header border-0 pb-0">
+        <h6 class="modal-title" id="imageModalLabel"></h6>
+        <button type="button" class="btn-close btn-close-white ms-0 me-auto" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body p-3 text-center">
+        <img id="imageModalImg" src="" class="img-fluid rounded shadow" alt="معاينة الصورة" style="max-height: 75vh; object-fit: contain;">
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer class="app-footer mt-5 py-4"><div class="container"><div class="row g-3">
+<div class="col-md-5"><h5>دليل فعاليات الجامعة الافتراضية</h5><p class="mb-0">كل ما يحدث في الجامعة في مكان واحد.</p></div>
+<div class="col-md-4"><h6>التواصل</h6><p class="mb-0">events@svuonline.org<br>+963 11 214 9800</p></div>
+<div class="col-md-3"><h6>تابعنا</h6><a href="https://www.facebook.com/SVU.Syria" target="_blank" rel="noopener noreferrer">فيسبوك</a> · <a href="https://www.instagram.com/svu_syria/" target="_blank" rel="noopener noreferrer">إنستغرام</a> · <a href="https://www.youtube.com/@SVU_Syria" target="_blank" rel="noopener noreferrer">يوتيوب</a></div>
+</div><hr><small>© 2026 دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.</small></div></footer>
+
+<button id="topBtn" class="btn btn-primary" aria-label="للأعلى" title="للأعلى">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body></html>

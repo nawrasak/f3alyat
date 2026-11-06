@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الرئيسية | دليل فعاليات الجامعة الافتراضية</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body data-page="home"><div id="page-transition"></div>
+
+<header>
+<nav class="navbar navbar-expand-lg sticky-top app-nav"><div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><img src="assets/img/logo.svg" width="38" height="38" alt="شعار الدليل"><span>دليل فعاليات الجامعة</span></a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nv" aria-label="القائمة"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nv"><ul class="navbar-nav ms-auto me-lg-3"><li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li><li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li><li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li><li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li></ul>
+<button id="darkBtn" class="btn btn-sm btn-outline-secondary" type="button">🌙 الوضع الداكن</button></div></div></nav>
+</header>
+
+<main>
+<section class="team-box"><div class="container d-flex align-items-center gap-2">
+<strong>إعداد الطالب:</strong>
+<span class="member d-inline-flex align-items-center gap-2"><img src="assets/img/avatar.svg" width="20" height="20" alt="أيقونة">نورس — ID: nawras_216779</span>
+<span class="member d-inline-flex align-items-center gap-2"><img src="assets/img/avatar.svg" width="20" height="20" alt="أيقونة">جومان — ID: juman_301950</span>
+</div></section>
+
+<section class="hero"><div class="container"><h1>اكتشف فعاليات جامعتك</h1><p class="lead">ثقافة ورياضة وموسيقى وأنشطة للعائلة، كلها في دليل واحد.</p>
+<a href="events.html" class="btn btn-warning btn-lg">تصفّح كل الفعاليات</a></div></section>
+
+<section class="stats-bar reveal"><div class="container"><div class="row g-4 text-center">
+<div class="col-6 col-md-3"><div class="stat-num" id="statEvents">0</div><div class="stat-lbl">فعالية متاحة</div></div>
+<div class="col-6 col-md-3"><div class="stat-num" id="statCats">0</div><div class="stat-lbl">تصنيف</div></div>
+<div class="col-6 col-md-3"><div class="stat-num" id="statPlaces">0</div><div class="stat-lbl">موقع جامعي</div></div>
+<div class="col-6 col-md-3"><div class="stat-num" id="statFeat">0</div><div class="stat-lbl">فعالية بارزة</div></div>
+</div></div></section>
+
+<section class="container py-4"><h2 class="sec-title">فعاليات بارزة هذا الأسبوع</h2>
+<div id="featured" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner" id="featInner"></div>
+<button class="carousel-control-prev" data-bs-target="#featured" data-bs-slide="prev" aria-label="السابق"><span class="carousel-control-prev-icon"></span></button>
+<button class="carousel-control-next" data-bs-target="#featured" data-bs-slide="next" aria-label="التالي"><span class="carousel-control-next-icon"></span></button></div></section>
+
+<section class="container py-4"><h2 class="sec-title">تصنيفات سريعة</h2><div id="catBadges" class="d-flex flex-wrap gap-2"></div></section>
+
+<section class="container py-4"><h2 class="sec-title">فعالية اليوم</h2><div id="todayCard"></div></section>
+
+<section class="container py-4"><h2 class="sec-title">أحدث الفعاليات</h2><div class="row g-4" id="latest"></div></section>
+</main>
+
+<footer class="app-footer mt-5 py-4"><div class="container"><div class="row g-3">
+<div class="col-md-5"><h5>دليل فعاليات الجامعة الافتراضية</h5><p class="mb-0">كل ما يحدث في الجامعة في مكان واحد.</p></div>
+<div class="col-md-4"><h6>التواصل</h6><p class="mb-0">events@svuonline.org<br>+963 11 214 9800</p></div>
+<div class="col-md-3"><h6>تابعنا</h6><a href="https://www.facebook.com/SVU.Syria" target="_blank" rel="noopener noreferrer">فيسبوك</a> · <a href="https://www.instagram.com/svu_syria/" target="_blank" rel="noopener noreferrer">إنستغرام</a> · <a href="https://www.youtube.com/@SVU_Syria" target="_blank" rel="noopener noreferrer">يوتيوب</a></div>
+</div><hr><small>© 2026 دليل فعاليات الجامعة الافتراضية. جميع الحقوق محفوظة.</small></div></footer>
+
+<button id="topBtn" class="btn btn-primary" aria-label="للأعلى" title="للأعلى">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body></html>
