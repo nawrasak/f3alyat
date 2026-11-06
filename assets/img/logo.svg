@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="logoBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F2A5A"/>
+      <stop offset="100%" stop-color="#0E7C86"/>
+    </linearGradient>
+  </defs>
+  <!-- خلفية الشعار -->
+  <rect width="64" height="64" rx="14" fill="url(#logoBg)"/>
+  <!-- قبعة التخرج الجامعية مع شريط الفعاليات الذهبي -->
+  <!-- قاعدة القبعة -->
+  <polygon points="32,16 52,26 32,36 12,26" fill="#F2A900"/>
+  <!-- رأس القبعة السفلية -->
+  <path d="M20,30.5 L20,39 Q32,46 44,39 L44,30.5 Q32,37 20,30.5 Z" fill="#ffffff" opacity="0.95"/>
+  <!-- شرابة التخرج الذهبية -->
+  <path d="M48,27.5 L50,38 L47,38 Z" fill="#F2A900"/>
+  <circle cx="32" cy="26" r="2.5" fill="#1F2A5A"/>
+  <!-- نجمة التميز الأكاديمي -->
+  <polygon points="32,47 34,51 38,51 35,53 36,57 32,54 28,57 29,53 26,51 30,51" fill="#F2A900"/>
+</svg>
